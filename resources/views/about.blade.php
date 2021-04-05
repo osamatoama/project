@@ -17,13 +17,19 @@
 <body>
 
 @include('menue')
+<div class="row">
+    <div class="col-12">
 
-<img src="{{asset('imam.png')}}" align="right" width="440" height="120" alt="logo">
+        <img src="{{asset('imam.png')}}" align="right" width="440" height="120" alt="logo">
+    </div>
+</div>
+
 <div class="container">
+
 <center><p>
     <h1><b><big><strong>About Us</strong></big></b></h1></p>
 
-    <img src="{{asset('fff.jpg')}}" align="center" width="700" height="500" alt="logo">
+    <img src="{{asset('fff.jpg')}}" align="center" width="1100" height="500" alt="logo">
 
 
 </center>
