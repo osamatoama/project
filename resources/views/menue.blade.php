@@ -12,6 +12,17 @@
     body{
         background-color: #DCD2C0 !important;
     }
+    footer {
+        background:#001133 ;
+        color: white;
+        text-align: center;
+        padding: 10px 15px;
+    }
+
+    footer a {
+        color: cadetblue;
+        text-decoration: none;
+    }
 </style>
 
 

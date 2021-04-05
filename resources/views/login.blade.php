@@ -25,25 +25,33 @@
 
             <form method="POST" action="{{ route('login') }}">
                 @csrf
-            <center>
                 <br><br>
-                <label for="uname"><b>Email</b></label>
-                <input type="text" placeholder="Enter Username" name="email" required>
-                <br><br>
-                <label for="psw"><b>Password</b></label>
-                <input type="password" placeholder="Enter Password" name="password" required>
-                <br><br>
-                <button type="submit">Login</button>
-                <label>
-                    <input type="checkbox" checked="checked" name="remember"> Remember me
-                </label>
-                <br>
-                <span class="psw">Forgot <a href="#">password?</a></span>
-            </center>
+                <div class="form-group row">
+                    <label for="example-text-input" class="col-sm-3 col-form-label">Email</label>
+                    <div class="col-sm-9">
+                        <input class="form-control" name="email" type="email" required>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="example-text-input" class="col-sm-3 col-form-label">Password</label>
+                    <div class="col-sm-9">
+                        <input class="form-control" name="password" type="password" required>
+                    </div>
+                </div>
+                <div class="text-center mt-3">
+                    <button type="submit" class="btn btn-primary waves-effect waves-light">Submit
+                    </button>
+                </div>
+
         </form>
         </div>
     </div>
 
+<br><br>
+<footer>
+    <p >  <i><b>2021Community College- Imam Abdulrahman Bin Faisal University. All rights reserved &copy;</b> </i></p>
+
+</footer>
 
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>

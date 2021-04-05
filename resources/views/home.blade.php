@@ -5,18 +5,6 @@
     <div class="myDiv4">
         <img src="{{asset('ud_logo.png')}}" width=400 height=100 align="right"></img>
         <br><br>
-        @auth
-            <a class="loginin" href="{{route('logout')}}" onclick="event.preventDefault();
-             document.getElementById('logout-form').submit();">Log out</a>
-            <form id="logout-form" action="{{ route('logout') }}" method="POST"
-                  style="display: none;">
-                {{ csrf_field() }}
-            </form>
-        @else
-            <a href="{{route('login')}}" class="loginin " name="button"> Logn in</a>
-        @endauth
-        <br>
-        <br>
 
         <div class="slider">
             <ul>

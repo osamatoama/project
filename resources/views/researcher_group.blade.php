@@ -1,5 +1,6 @@
 <html>
 <head>
+    <title>Community College</title>
     <style>
         h1 {
             font-size: 40px;
@@ -68,6 +69,11 @@
         </select>
     </form>
     <input type="button" value="Apply">
+    <br><br>
+    <footer>
+        <p >  <i><b>2021Community College- Imam Abdulrahman Bin Faisal University. All rights reserved &copy;</b> </i></p>
+
+    </footer>
 
 </body>
 </html>

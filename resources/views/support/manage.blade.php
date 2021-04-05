@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
-<head><title> GP-Support</title>
+<head>
+    <title> GP-Support</title>
     <style>
         body {background-color:	#e6e6e6;}
 
