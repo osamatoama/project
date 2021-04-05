@@ -29,7 +29,7 @@
 <center><p>
     <h1><b><big><strong>About Us</strong></big></b></h1></p>
 
-    <img src="{{asset('fff.jpg')}}" align="center" width="1100" height="500" alt="logo">
+    <img src="{{asset('fff.jpg')}}" align="center" width="1000" height="400" alt="logo">
 
 
 </center>
