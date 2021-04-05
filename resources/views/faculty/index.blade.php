@@ -24,7 +24,7 @@
 <center>
     @include('menue')
 
-    <img src="iau.png" width ="700" height="200"  ></img><br><br>
+    <img src="{{asset('iau.png')}}" width ="700" height="200"  ></img><br><br>
 
 
     <h1 style="border: 4px solid #000066  ; background-color:#204060 ;" >Add {{$type}}</h1>

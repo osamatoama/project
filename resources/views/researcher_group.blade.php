@@ -10,7 +10,7 @@
 </head>
 <body bgcolor="#F2EFFB">
 
-<img src=" zz.png"  width="1400" height="150" align="center-right">
+<img src="{{asset('zz.png')}}"  width="1400" height="150" align="center-right">
 <center>
     <h1>Researcher</h1>
     <form action="/action_page.php"> <center>

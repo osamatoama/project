@@ -18,12 +18,12 @@
 
 @include('menue')
 
-<img src="imam.PNG" align="right" width="440" height="120" alt="logo">
+<img src="{{asset('imam.PNG')}}" align="right" width="440" height="120" alt="logo">
 <div class="container">
 <center><p>
     <h1><b><big><strong>About Us</strong></big></b></h1></p>
 
-    <img src="fff.JPG" align="center" width="700" height="500" alt="logo">
+    <img src="{{asset('fff.JPG')}}" align="center" width="700" height="500" alt="logo">
 
 
 </center>

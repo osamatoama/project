@@ -22,7 +22,7 @@
 <body>
 @include('menue')
 <center>
-    <img src="iau.png" width ="700" height="200"  ></img><br><br>
+    <img src="{{asset('iau.png')}}" width ="700" height="200"  ></img><br><br>
 
 
     <h1 style="border: 4px solid #000066  ; background-color:#204060 ;" >Graduation Project Support</h1>

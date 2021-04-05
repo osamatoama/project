@@ -14,7 +14,7 @@
 @include('menue')
     <div class="row">
         <div class="m-auto">
-            <img class="" src="university Logo.png" align="right" width="651" height="151" alt="logo">
+            <img class="" src="{{asset('university Logo.png')}}" align="right" width="651" height="151" alt="logo">
         </div>
     </div>
 <br><br><br>

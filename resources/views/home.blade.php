@@ -3,7 +3,7 @@
 @section('content')
 
     <div class="myDiv4">
-        <img src="ud_logo.png" width=400 height=100 align="right"></img>
+        <img src="{{asset('ud_logo.png')}}" width=400 height=100 align="right"></img>
         <br><br>
         @auth
             <a class="loginin" href="{{route('logout')}}" onclick="event.preventDefault();
@@ -23,23 +23,23 @@
 
                 <li>
 
-                    <img src="ccq.jpg" alt="" width="1300" height="300"></img>
+                    <img src="{{asset('ccq.jpg')}}" alt="" width="1300" height="300"></img>
 
 
                 </li>
                 <li>
 
-                    <img src="ccq1.jpg" alt="" width="1300" height="300"></img>
+                    <img src="{{asset('ccq1.jpg')}}" alt="" width="1300" height="300"></img>
 
                 </li>
 
                 <li>
-                    <img src="ccq2.jpg" alt="" width="1300" height="300"></img>
+                    <img src="{{asset('ccq2.jpg')}}" alt="" width="1300" height="300"></img>
 
                 </li>
 
                 <li>
-                    <img src="ccq3.jpg" alt="" width="1300" height="300"></img>
+                    <img src="{{asset('ccq3.jpg')}}" alt="" width="1300" height="300"></img>
 
                 </li>
 
@@ -87,13 +87,13 @@
     <div class="myDiv2">
         <h1 style="border: none  ;background-color:#664400;"><i>Last News</i></h1>
 
-        <img src="div1.jpg" alt="" width="300" height="300"></img>
+        <img src="{{asset('div1.jpg')}}" alt="" width="300" height="300"></img>
 
-        <img src="div2.jpg" alt="" width="300" height="300"></img>
-        <img src="div3.jpg" alt="" width="300" height="300"></img><br><br>
-        <img src="div4.jpg" alt="" width="300" height="300"></img>
-        <img src="div5.jpg" alt="" width="300" height="300"></img>
-        <img src="div5.jpg" alt="" width="300" height="300"></img>
+        <img src="{{asset('div2.jpg')}}" alt="" width="300" height="300"></img>
+        <img src="{{asset('div3.jpg')}}" alt="" width="300" height="300"></img><br><br>
+        <img src="{{asset('div4.jpg')}}" alt="" width="300" height="300"></img>
+        <img src="{{asset('div5.jpg')}}" alt="" width="300" height="300"></img>
+        <img src="{{asset('div5.jpg')}}" alt="" width="300" height="300"></img>
     </div>
 
     <div class="myDiv3">
@@ -113,7 +113,7 @@
 
     </div>
     <div class="myDiv4">
-        <img src="ud_logo.png" width=400 height=100 align="right"></img>
+        <img src="{{asset('ud_logo.png')}}" width=400 height=100 align="right"></img>
         <br><br>
         ‎
         <i class="fab fa-twitter" style=" font-size:50px;color:gray" align="right"></i>
