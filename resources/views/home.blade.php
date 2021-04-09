@@ -86,19 +86,25 @@
 
     <div class="myDiv3">
         <h1><i>The Location </i></h1>
-        ‎
-        <HR WIDTH="80%" ALIGN="center >‎
+
+        <hr WIDTH="80%" ALIGN="center >
 
 
 
- <i class=" fas fa-map-marker-alt
-        " style="font-size:35px; color:gray;"></i>
+ <i class=" fas fa-map-marker-alt" style="font-size:35px; color:gray;"></i>
         <p> Qatif</p>
-        <i class="fas fa-map-marker-alt" style="font-size:35px; color:gray;"></i>
+        <a href="https://goo.gl/maps/tmTaYebhFZb9H4cF8" target="_blank">
+            <i class="fas fa-map-marker-alt" style="font-size:35px; color:gray;"></i>
+        </a>
         <p>Damamm</p>
-        <i class="fas fa-map-marker-alt" style="font-size:36px; color:gray;"></i>
+        <a href="https://goo.gl/maps/SbdPgkGvfCiqympL8" target="_blank">
+            <i class="fas fa-map-marker-alt" style="font-size:36px; color:gray;"></i>
+        </a>
         <p> Alraka</p>
-
+        <a href="https://goo.gl/maps/iDkY3rVRLacx49ts6" target="_blank">
+            <i class="fas fa-map-marker-alt" style="font-size:36px; color:gray;"></i>
+        </a>
+<br><br>
     </div>
     <div class="myDiv4">
         <img src="{{asset('ud_logo.png')}}" width=400 height=100 align="right"></img>
