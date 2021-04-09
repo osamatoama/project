@@ -36,15 +36,21 @@ class DatabaseSeeder extends Seeder
 
         \App\Models\ResearchGroup::create([
             'name' => 'ResearchGroup 1 ',
+            'admin_name'  => 'admin group',
+            'admin_email'  => 'adminGroup@gmail.com',
             'description' => 'ResearchGroup 1 desc',
         ]);
 
         \App\Models\ResearchGroup::create([
             'name' => 'ResearchGroup 2 ',
+            'admin_name'  => 'admin group',
+            'admin_email'  => 'adminGroup@gmail.com',
             'description' => 'ResearchGroup 2 desc',
         ]);
         \App\Models\ResearchGroup::create([
             'name' => 'ResearchGroup 3 ',
+            'admin_name'  => 'admin group',
+            'admin_email'  => 'adminGroup@gmail.com',
             'description' => 'ResearchGroup 3 desc',
         ]);
     }

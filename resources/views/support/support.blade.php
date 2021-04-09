@@ -32,6 +32,21 @@
         @csrf
         @include('layouts.component.flash-message')
         <div class="form-group row">
+            <label for="example-text-input" class="col-sm-2 col-form-label">Main Are :</label>
+            <div class="col-sm-10">
+                <select class="form-control" name="main_are">
+                    <option value="Mobile Application">Mobile Application</option>
+                    <option value="Web Application">Web Application</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="example-text-input" class="col-sm-2 col-form-label">Project Title *</label>
+            <div class="col-sm-10">
+                <input class="form-control" name="project_title" type="text" required>
+            </div>
+        </div>
+        <div class="form-group row">
             <label for="example-text-input" class="col-sm-2 col-form-label">Type of support:</label>
             <div class="col-sm-10">
                 <select class="form-control" name="type_of_support">

@@ -36,9 +36,21 @@
               enctype="multipart/form-data">
             @csrf
             <div class="form-group row">
-                <label for="example-text-input" class="col-sm-2 col-form-label">Name *</label>
+                <label for="example-text-input" class="col-sm-2 col-form-label">Group Name *</label>
                 <div class="col-sm-10">
                     <input class="form-control" name="name" type="text" required>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="example-text-input" class="col-sm-2 col-form-label">Admin Name *</label>
+                <div class="col-sm-10">
+                    <input class="form-control" name="admin_name" type="text" required>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="example-text-input" class="col-sm-2 col-form-label">Admin Email *</label>
+                <div class="col-sm-10">
+                    <input class="form-control" name="admin_email" type="email" required>
                 </div>
             </div>
             <div class="form-group row">
@@ -61,9 +73,11 @@
             <thead>
                 <tr>
                     <th scope="col">#</th>
-                    <th scope="col">name</th>
-                    <th scope="col">description</th>
-                    <th scope="col">options</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Admin Name</th>
+                    <th scope="col">Admin Email</th>
+                    <th scope="col">Description</th>
+                    <th scope="col">Options</th>
                 </tr>
             </thead>
 
@@ -72,6 +86,8 @@
                 <tr>
                     <th scope="row">{{$research_group->id}}</th>
                     <td>{{$research_group->name}}</td>
+                    <td>{{$research_group->admin_name}}</td>
+                    <td>{{$research_group->admin_email}}</td>
                     <td>{{$research_group->description}}</td>
                     <td>
                         @if(user()->type == 'admin')

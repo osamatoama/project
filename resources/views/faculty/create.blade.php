@@ -35,12 +35,27 @@
         <form method="post" action="{{route('user.store')}}"
               enctype="multipart/form-data">
             @csrf
-            <div class="form-group row">
-                <label for="example-text-input" class="col-sm-2 col-form-label">name</label>
-                <div class="col-sm-10">
-                    <input class="form-control" name="name" type="text" required>
+            @if($type != 'faculty')
+                <div class="form-group row">
+                    <label for="example-text-input" class="col-sm-2 col-form-label">name</label>
+                    <div class="col-sm-10">
+                        <input class="form-control" name="name" type="text" required>
+                    </div>
                 </div>
-            </div>
+            @else
+                <div class="form-group row">
+                    <label for="example-text-input" class="col-sm-2 col-form-label">First name</label>
+                    <div class="col-sm-10">
+                        <input class="form-control" name="first_name" type="text" required>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="example-text-input" class="col-sm-2 col-form-label">Last name</label>
+                    <div class="col-sm-10">
+                        <input class="form-control" name="last_name" type="text" required>
+                    </div>
+                </div>
+            @endif
             <div class="form-group row">
                 <label for="example-text-input" class="col-sm-2 col-form-label">email</label>
                 <div class="col-sm-10">

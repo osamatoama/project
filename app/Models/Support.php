@@ -14,6 +14,8 @@ class Support extends Model
         'type_of_support',
         'branch',
         'active',
+        'project_title',
+        'main_are',
         'description',
     ];
 

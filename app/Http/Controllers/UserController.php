@@ -38,17 +38,25 @@ class UserController extends Controller
             abort(404);
         }
         $this->validate($request, [
-            'name'  => 'required',
+//            'name'  => 'required',
             'email'  => 'required|unique:users',
+            'password' => ['nullable','string', 'min:6'],
         ]);
         $arr = array_merge($request->all(),[
             'password' => bcrypt($request->password)
         ]);
         $user = User::create($arr);
 
-        return redirect()->back()->with([
-            'success' => 'created'
-        ]);
+        if($user->type == 'student') {
+            return redirect()->back()->with([
+                'success' => 'created'
+            ]);
+        }else{
+            return redirect()->back()->with([
+                'success' => 'Faculty details have been added Successfully'
+            ]);
+        }
+
     }
 
     public function edit(User $user)
@@ -68,7 +76,7 @@ class UserController extends Controller
             abort(404);
         }
         $request->validate([
-            'name' => ['required', 'string', 'max:255'],
+//            'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users,id,'.user()->id],
             'password' => ['nullable','string', 'min:6'],
         ]);
@@ -85,9 +93,16 @@ class UserController extends Controller
         }
         $type = $this->type;
 
-        return redirect(route('user.index').'?type='.$type)->with([
-            'success' => 'updated'
-        ]);
+        if($type == 'student') {
+            return redirect(route('user.index').'?type='.$type)->with([
+                'success' => 'Information Updated Successfully'
+            ]);
+        }else{
+            return redirect(route('user.index').'?type='.$type)->with([
+                'success' => 'Faculty Information Updated Successfully'
+            ]);
+        }
+
     }
 
     public function destroy(User $user)
@@ -98,7 +113,7 @@ class UserController extends Controller
         $type = $this->type ?? request()->type;
         $user->delete();
         return redirect(route('user.index').'?type='.$type)->with([
-            'success' => 'updated'
+            'success' => 'Deleted'
         ]);
     }
 }

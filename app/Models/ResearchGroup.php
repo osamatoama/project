@@ -10,6 +10,8 @@ class ResearchGroup extends Model
     use HasFactory;
     protected $fillable = [
         'name',
+        'admin_name',
+        'admin_email',
         'description',
     ];
 

@@ -20,7 +20,10 @@ class CreateSupportsTable extends Migration
             $table->foreign('user_id')->references('id')
                 ->on('users')->cascadeOnDelete()->cascadeOnUpdate();
 
+            $table->string('main_are');
+            $table->string('project_title');
             $table->string('type_of_support');
+
             $table->string('branch')->nullable();
             $table->boolean('active')->default(0);
             $table->longText('description')->nullable();

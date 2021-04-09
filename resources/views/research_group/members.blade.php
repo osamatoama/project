@@ -43,8 +43,8 @@
             <thead>
                 <tr>
                     <th scope="col">#</th>
-                    <th scope="col">student name</th>
-                    <th scope="col">student email</th>
+                    <th scope="col">name</th>
+                    <th scope="col">demail</th>
                     <th scope="col">research group name</th>
                     <th scope="col">status</th>
                     <th scope="col">options</th>

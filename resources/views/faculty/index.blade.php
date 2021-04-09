@@ -38,8 +38,13 @@
             <thead>
                 <tr>
                     <th scope="col">#</th>
-                    <th scope="col">name</th>
-                    <th scope="col">email</th>
+                    @if($type == 'student')
+                        <th scope="col">Name</th>
+                    @else
+                        <th scope="col">First name</th>
+                        <th scope="col">Last name</th>
+                    @endif
+                    <th scope="col">Email</th>
                     @if($type == 'faculty')
                         <th scope="col">Research Group</th>
                     @endif
@@ -51,7 +56,12 @@
             @foreach($users as $user)
                 <tr>
                     <th scope="row">{{$user->id}}</th>
-                    <td>{{$user->name}}</td>
+                    @if($type == 'student')
+                        <td>{{ $user->name }}</td>
+                    @else
+                        <td scope="col">{{ $user->first_name }}</td>
+                        <td scope="col">{{ $user->last_name }}</td>
+                    @endif
                     <td>{{$user->email}}</td>
                     @if($type == 'faculty')
                         <td>{{$user->researchGroup->name??''}}</td>

@@ -17,11 +17,7 @@ class SupportController extends Controller
             'branch' => 'required',
         ]);
 
-        user()->supports()->create([
-            'type_of_support' => $request->type_of_support,
-            'branch' => $request->type_of_support,
-            'description' => $request->description,
-        ]);
+        user()->supports()->create($request->all());
 
         return redirect()->back()->with([
             'success' => 'your request has been sent success'

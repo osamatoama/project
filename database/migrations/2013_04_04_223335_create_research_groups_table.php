@@ -16,6 +16,8 @@ class CreateResearchGroupsTable extends Migration
         Schema::create('research_groups', function (Blueprint $table) {
             $table->id();
             $table->string('name');
+            $table->string('admin_name');
+            $table->string('admin_email');
             $table->longText('description')->nullable();
             $table->timestamps();
         });

@@ -34,6 +34,8 @@ class ResearchGroupController extends Controller
         }
         $this->validate($request, [
             'name'  => 'required',
+            'admin_name'  => 'required',
+            'admin_email'  => 'required',
             'description'  => 'required',
         ]);
 
@@ -59,13 +61,15 @@ class ResearchGroupController extends Controller
         }
         $request->validate([
             'name'  => 'required',
+            'admin_name'  => 'required',
+            'admin_email'  => 'required',
             'description'  => 'required',
         ]);
 
         $researchGroup->update($request->all());
 
         return redirect(route('research-group.index'))->with([
-            'success' => 'updated'
+            'success' => 'Information Updated Successfully'
         ]);
     }
 
@@ -77,7 +81,7 @@ class ResearchGroupController extends Controller
         $researchGroup->delete();
 
         return redirect(route('research-group.index'))->with([
-            'success' => 'updated'
+            'success' => 'Information Updated Successfully'
         ]);
     }
 }

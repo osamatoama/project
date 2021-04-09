@@ -24,9 +24,11 @@
 <center>
     <img src="{{asset('iau.png')}}" width ="700" height="200"  ></img><br><br>
 
-
-    <h1 style="border: 4px solid #000066  ; background-color:#204060 ;" >Edit {{$type}}</h1>
-
+    @if($type == 'student')
+        <h1 style="border: 4px solid #000066  ; background-color:#204060 ;" >Edit {{$type}}</h1>
+    @else
+        <h1 style="border: 4px solid #000066  ; background-color:#204060 ;" >update Faculty Information</h1>
+    @endif
     <div class="container">
         @include('layouts.component.flash-message')
 
@@ -34,12 +36,27 @@
               enctype="multipart/form-data">
             @csrf
             @method('PUT')
-            <div class="form-group row">
-                <label for="example-text-input" class="col-sm-2 col-form-label">name</label>
-                <div class="col-sm-10">
-                    <input class="form-control" value="{{$user->name}}" name="name" type="text" required>
+            @if($type != 'faculty')
+                <div class="form-group row">
+                    <label for="example-text-input" class="col-sm-2 col-form-label">name</label>
+                    <div class="col-sm-10">
+                        <input class="form-control" value="{{$user->name}}" name="name" type="text" required>
+                    </div>
                 </div>
-            </div>
+            @else
+                <div class="form-group row">
+                    <label for="example-text-input" class="col-sm-2 col-form-label">First name</label>
+                    <div class="col-sm-10">
+                        <input class="form-control" value="{{$user->first_name}}" name="first_name" type="text" required>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="example-text-input" class="col-sm-2 col-form-label">Last name</label>
+                    <div class="col-sm-10">
+                        <input class="form-control" value="{{$user->last_name}}" name="last_name" type="text" required>
+                    </div>
+                </div>
+            @endif
             <div class="form-group row">
                 <label for="example-text-input" class="col-sm-2 col-form-label">email</label>
                 <div class="col-sm-10">
