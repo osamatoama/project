@@ -51,14 +51,11 @@
                     </div>
                 </li>
             @endif
-            <li class="nav-item active">
-                <a class="nav-link" href="{{url('')}}">Accredation</a>
-            </li>
 
 
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Depatments
+                    Departments
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                     <a class="dropdown-item" href="{{route('computing-depatment')}}">Computing Depatment</a>
@@ -68,7 +65,7 @@
             </li>
             @if(auth()->check()&&user()->type == 'admin')
                 <li class="nav-item active">
-                    <a class="nav-link" href="{{route('research-group.index')}}">research groups</a>
+                    <a class="nav-link" href="{{route('research-group.index')}}">Research Groups</a>
                 </li>
             @elseif (auth()->check()&&user()->type == 'student')
 

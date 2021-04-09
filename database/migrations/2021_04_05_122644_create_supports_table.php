@@ -23,6 +23,7 @@ class CreateSupportsTable extends Migration
             $table->string('type_of_support');
             $table->string('branch')->nullable();
             $table->boolean('active')->default(0);
+            $table->longText('description')->nullable();
 
             $table->timestamps();
         });

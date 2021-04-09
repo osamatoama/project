@@ -20,7 +20,7 @@
 <br><br><br>
     <div class="row">
         <div class="m-auto">
-            <h1 align="center"> Login  </h1>
+            <h1 align="center"> Log in  </h1>
             @include('layouts.component.flash-message')
 
             <form method="POST" action="{{ route('login') }}">
@@ -29,7 +29,7 @@
                 <div class="form-group row">
                     <label for="example-text-input" class="col-sm-3 col-form-label">Email</label>
                     <div class="col-sm-9">
-                        <input class="form-control" name="email" type="email" required>
+                        <input autocomplete="false" class="form-control" name="email" type="email" required>
                     </div>
                 </div>
                 <div class="form-group row">
@@ -38,10 +38,23 @@
                         <input class="form-control" name="password" type="password" required>
                     </div>
                 </div>
-                <div class="text-center mt-3">
-                    <button type="submit" class="btn btn-primary waves-effect waves-light">Submit
-                    </button>
+                <a href="{{ route('password.request') }}"> <i
+                        class="mdi mdi-lock"></i>
+                    Forget Password ?
+                </a>
+                <div class="row">
+                    <div class="col-3 text-center mt-3">
+                        <a  href="{{route('cancel-home')}}" class="btn btn-warning waves-effect waves-light">
+                            Cancel
+                        </a>
+                    </div>
+                    <div class="col-6 text-center mt-3">
+                        <button type="submit" class="btn btn-primary waves-effect waves-light">
+                            Submit
+                        </button>
+                    </div>
                 </div>
+
 
         </form>
         </div>

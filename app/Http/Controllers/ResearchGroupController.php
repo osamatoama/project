@@ -29,7 +29,7 @@ class ResearchGroupController extends Controller
 
     public function store(Request $request)
     {
-        if (user()->type != 'admin' && user()->type != 'faculty') {
+        if (user()->type != 'admin') {
             abort(404);
         }
         $this->validate($request, [
@@ -40,13 +40,13 @@ class ResearchGroupController extends Controller
         ResearchGroup::create($request->all());
 
         return redirect()->back()->with([
-            'success' => 'added'
+            'success' => 'created'
         ]);
     }
 
     public function edit(ResearchGroup $researchGroup)
     {
-        if (user()->type != 'admin' && user()->type != 'faculty') {
+        if (user()->type != 'admin') {
             abort(404);
         }
         return view('research_group.edit', compact('researchGroup'));
@@ -54,7 +54,7 @@ class ResearchGroupController extends Controller
 
     public function update(Request $request, ResearchGroup $researchGroup)
     {
-        if (user()->type != 'admin' && user()->type != 'faculty') {
+        if (user()->type != 'admin') {
             abort(404);
         }
         $request->validate([

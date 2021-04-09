@@ -34,6 +34,18 @@ class JoinSearchGroupController extends Controller
         ]);
     }
 
+    public function join_faculty($id){
+        if (user()->type != 'admin' && user()->type != 'faculty') {
+            abort(404);
+        }
+        $ResearchGroup = ResearchGroup::find($id);
+        $fac = user()->joinedResearchGroup()->attach([$ResearchGroup->id]);
+
+        return redirect()->back()->with([
+            'success' => 'your are joined'
+        ]);
+    }
+
     public function accept(JoinReserchGroup $joinReserchGroup){
         if (user()->type != 'admin' && user()->type != 'faculty') {
             abort(404);

@@ -20,7 +20,7 @@ Auth::routes();
 
 Route::get('/', function () {
     return view('home');
-});
+})->name('home');
 
 Route::get('/about', function () {
     return view('about');
@@ -50,6 +50,17 @@ Route::get('/test', function () {
     dd(user()->id);
 })->name('test');
 
+Route::get('/cancel', function () {
+    return redirect()->back()->with([
+        'error' => 'cancelled'
+    ]);
+})->name('cancel');
+
+Route::get('/cancel-home', function () {
+    return redirect()->route('home')->with([
+        'error' => 'cancelled'
+    ]);
+})->name('cancel-home');
 
 Route::group(['middleware' => 'auth'],function (){
 
@@ -72,6 +83,9 @@ Route::group(['middleware' => 'auth'],function (){
 
     Route::post('/join', [JoinSearchGroupController::class, 'join'])
         ->name('join');
+
+    Route::get('/join-faculty/{id}', [JoinSearchGroupController::class, 'join_faculty'])
+        ->name('join-faculty');
 
     Route::get('/members/{research_group}', [JoinSearchGroupController::class, 'members'])
         ->name('members');

@@ -30,6 +30,13 @@
     <h1 style="border: 4px solid #000066  ; background-color:#204060 ;" >Research Group Members</h1>
 
     <div class="container">
+        <div class="text-center mt-3">
+            <a href="{{route('cancel-home')}}" class="btn btn-warning waves-effect waves-light">Cancel
+            </a>
+
+            <a href="{{ url()->previous() }}" class="btn btn-primary waves-effect waves-light">Go Back
+            </a>
+        </div>
         @include('layouts.component.flash-message')
 <hr>
         <table class="table">

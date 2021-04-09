@@ -39,6 +39,7 @@
             <th scope="col">email</th>
             <th scope="col">type of support</th>
             <th scope="col">branch</th>
+            <th scope="col">Description</th>
             <th scope="col">Status</th>
             <th scope="col">actions</th>
         </tr>
@@ -52,6 +53,7 @@
                 <td>{{$support->user->email ?? ''}}</td>
                 <td>{{$support->type_of_support ?? ''}}</td>
                 <td>{{$support->branch ?? ''}}</td>
+                <td>{{$support->description ?? ''}}</td>
                 <td>{{$support->active ==0 ? 'pending':'accepted'}}</td>
                 <td>
                     @if($support->active)

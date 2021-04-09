@@ -37,7 +37,7 @@
                 <select class="form-control" name="type_of_support">
                     <option value="Computer software">Computer software</option>
                     <option value="Computer hardware">Computer hardware</option>
-                    <option value="other">other</option>
+                    <option value="other">Other</option>
                 </select>
             </div>
         </div>
@@ -49,6 +49,12 @@
                     <option value="Dammam"> Dammam </option>
                     <option value="Alraka"> Alraka </option>
                 </select>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="example-text-input" class="col-sm-2 col-form-label">Description:</label>
+            <div class="col-sm-10">
+                <textarea class="form-control" name="description"></textarea>
             </div>
         </div>
         <div class="text-center mt-3">
@@ -63,10 +69,11 @@
         <thead>
         <tr>
             <th scope="col">#</th>
-            <th scope="col">name</th>
-            <th scope="col">email</th>
-            <th scope="col">type of support</th>
-            <th scope="col">branch</th>
+            <th scope="col">Name</th>
+            <th scope="col">Email</th>
+            <th scope="col">Type of support</th>
+            <th scope="col">Branch</th>
+            <th scope="col">Description</th>
             <th scope="col">Status</th>
         </tr>
         </thead>
@@ -79,6 +86,7 @@
                 <td>{{$support->user->email ?? ''}}</td>
                 <td>{{$support->type_of_support ?? ''}}</td>
                 <td>{{$support->branch ?? ''}}</td>
+                <td>{{$support->description ?? ''}}</td>
                 <td>{{$support->active ==0 ? 'pending':'accepted'}}</td>
             </tr>
         @endforeach

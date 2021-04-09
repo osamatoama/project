@@ -26,7 +26,10 @@ class UserController extends Controller
 
     public function create()
     {
-        return view('faculty.index');
+        $type = $this->type;
+        $researchGroups = ResearchGroup::get();
+
+        return view('faculty.create',compact('type','researchGroups'));
     }
 
     public function store(Request $request)
@@ -44,7 +47,7 @@ class UserController extends Controller
         $user = User::create($arr);
 
         return redirect()->back()->with([
-            'success' => 'added'
+            'success' => 'created'
         ]);
     }
 

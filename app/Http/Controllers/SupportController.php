@@ -20,6 +20,7 @@ class SupportController extends Controller
         user()->supports()->create([
             'type_of_support' => $request->type_of_support,
             'branch' => $request->type_of_support,
+            'description' => $request->description,
         ]);
 
         return redirect()->back()->with([

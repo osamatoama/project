@@ -27,51 +27,12 @@
     <img src="{{asset('iau.png')}}" width ="700" height="200"  ></img><br><br>
 
 
-    <h1 style="border: 4px solid #000066  ; background-color:#204060 ;" >Add {{$type}}</h1>
-
+    <h1 style="border: 4px solid #000066  ; background-color:#204060 ;" >{{$type}}</h1>
+    <a href="{{route('user.create')}}?type={{$type}}" class="btn btn-success">Create
+    </a>
     <div class="container">
         @include('layouts.component.flash-message')
 
-        <form method="post" action="{{route('user.store')}}"
-              enctype="multipart/form-data">
-            @csrf
-            <div class="form-group row">
-                <label for="example-text-input" class="col-sm-2 col-form-label">name</label>
-                <div class="col-sm-10">
-                    <input class="form-control" name="name" type="text" required>
-                </div>
-            </div>
-            <div class="form-group row">
-                <label for="example-text-input" class="col-sm-2 col-form-label">email</label>
-                <div class="col-sm-10">
-                    <input class="form-control" name="email" type="email" required>
-                </div>
-            </div>
-            <div class="form-group row">
-                <label for="example-text-input" class="col-sm-2 col-form-label">password</label>
-                <div class="col-sm-10">
-                    <input class="form-control" name="password" type="password" required>
-                </div>
-            </div>
-            @if($type == 'faculty')
-                <div class="form-group row">
-                    <label for="example-text-input" class="col-sm-2 col-form-label">Research group interested</label>
-                    <div class="col-sm-10">
-                        <select class="form-control" name="research_group_id">
-                            @foreach($researchGroups as $researchGroup)
-                                <option value=""></option>
-                                <option value="{{$researchGroup->id}}">{{$researchGroup->name}}</option>
-                            @endforeach
-                        </select>
-                    </div>
-                </div>
-            @endif
-            <input type="hidden" name="type" value="{{$type}}">
-            <div class="text-center mt-3">
-                <button type="submit" class="btn btn-primary waves-effect waves-light">Submit
-                </button>
-            </div>
-        </form>
 <hr>
         <table class="table">
             <thead>

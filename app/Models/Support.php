@@ -14,6 +14,7 @@ class Support extends Model
         'type_of_support',
         'branch',
         'active',
+        'description',
     ];
 
     public function user(){
